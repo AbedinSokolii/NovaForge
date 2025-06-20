@@ -1,0 +1,264 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-animated-light {
+  background: linear-gradient(120deg, #1e3a8a, #2563eb, #06b6d4);
+  background-size: 200% 200%;
+  animation: move-light 8s ease-in-out infinite;
+  opacity: 0.4;
+  filter: blur(32px);
+}
+
+@keyframes move-light {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@font-face {
+  font-family: 'Dancing Script';
+  src: url('https://fonts.gstatic.com/s/dancingscript/v24/If2RXTr6YS-zF4S-kcSWSVi_szQ.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.signature-font {
+  font-family: 'Dancing Script', cursive;
+}
+
+.moving-light-line {
+  position: relative;
+  background-size: 200% 100%;
+  animation: move-light-line 3s linear infinite;
+}
+
+@keyframes move-light-line {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.moving-light-line-rtl {
+  position: relative;
+  background-size: 200% 100%;
+  animation: move-light-line-rtl 3s linear infinite;
+}
+
+@keyframes move-light-line-rtl {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.moving-light-line-diag {
+  position: relative;
+  background-size: 200% 200%;
+  animation: move-light-line-diag 4s linear infinite;
+}
+
+@keyframes move-light-line-diag {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.dvd-bounce-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.dvd-bounce-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: dvd-bounce 4s linear infinite alternate;
+}
+
+@keyframes dvd-bounce {
+  0% {
+    left: 0%;
+    top: 0%;
+  }
+  20% {
+    left: 60%;
+    top: 0%;
+  }
+  40% {
+    left: 60%;
+    top: 80%;
+  }
+  60% {
+    left: 0%;
+    top: 80%;
+  }
+  80% {
+    left: 0%;
+    top: 0%;
+  }
+  100% {
+    left: 60%;
+    top: 0%;
+  }
+}
+
+.dvd-bounce-line-parallel {
+  animation-delay: 3s;
+  top: 100%;
+}
+
+.dvd-parallel-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.dvd-parallel-line-left {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 1rem;
+  background-size: 200% 100%;
+  animation: dvd-parallel-left 3.5s cubic-bezier(0.4,0,0.2,1) infinite alternate;
+}
+.dvd-parallel-line-right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 1rem;
+  background-size: 200% 100%;
+  animation: dvd-parallel-right 3.5s cubic-bezier(0.4,0,0.2,1) infinite alternate;
+}
+
+@keyframes dvd-parallel-left {
+  0% {
+    left: 0%;
+    filter: blur(0.5rem);
+  }
+  50% {
+    left: 50%;
+    filter: blur(2rem);
+  }
+  100% {
+    left: 0%;
+    filter: blur(0.5rem);
+  }
+}
+@keyframes dvd-parallel-right {
+  0% {
+    right: 0%;
+    filter: blur(0.5rem);
+  }
+  50% {
+    right: 50%;
+    filter: blur(2rem);
+  }
+  100% {
+    right: 0%;
+    filter: blur(0.5rem);
+  }
+}
+
+.glass-bg {
+  background: rgba(255,255,255,0.25);
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 2rem;
+  border: 1px solid rgba(255,255,255,0.18);
+}
+
+.move-updown {
+  animation: move-rightdown 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes move-rightdown {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(40px, 40px);
+  }
+}
+
+body, html, #root {
+  cursor: none !important;
+}
+
+.features-v-line {
+  position: absolute;
+  left: 50%;
+  top: 6rem;
+  width: 66%;
+  height: 8rem;
+  transform: translateX(-10%) rotate(-20deg) skewY(-10deg);
+  background: linear-gradient(120deg, rgba(0,176,255,0.1) 60%, rgba(0,176,255,0.7) 100%);
+  border-radius: 2rem 0 2rem 0;
+  filter: blur(12px);
+  box-shadow: 0 0 32px 8px rgba(0,176,255,0.3);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.features-side-line-left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 6rem;
+  height: 10rem;
+  background: linear-gradient(70deg, rgba(0,176,255,0.7) 0%, rgba(0,176,255,0.1) 100%);
+  border-radius: 0 0 2rem 2rem;
+  filter: blur(12px);
+  transform: skewY(-18deg) translateY(2rem);
+  box-shadow: 0 0 32px 8px rgba(0,176,255,0.2);
+  pointer-events: none;
+  z-index: 0;
+}
+.features-side-line-right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 6rem;
+  height: 10rem;
+  background: linear-gradient(-70deg, rgba(0,176,255,0.7) 0%, rgba(0,176,255,0.1) 100%);
+  border-radius: 0 0 2rem 2rem;
+  filter: blur(12px);
+  transform: skewY(18deg) translateY(2rem);
+  box-shadow: 0 0 32px 8px rgba(0,176,255,0.2);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.features-horizontal-line {
+  background: linear-gradient(90deg, rgba(0,176,255,0.1) 0%, rgba(0,176,255,0.7) 50%, rgba(0,176,255,0.1) 100%);
+  filter: blur(0px);
+  box-shadow: 0 0 24px 4px rgba(0,176,255,0.3);
+}
+
+.glass-feature-box {
+  background: rgba(0,176,255,0.18);
+  box-shadow: 0 8px 32px 0 rgba(0,176,255,0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 1.5rem;
+  border: 1px solid rgba(0,176,255,0.25);
+}
+
+.bg-half-blue-black {
+  background: linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%);
+}
+
