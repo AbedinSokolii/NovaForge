@@ -140,7 +140,7 @@ function App() {
         {/* Right: Text Content */}
         <div className="md:w-1/2 w-full flex flex-col gap-6">
           <h2 className="text-3xl font-bold mb-4">Building High-Converting Websites. Turning Clicks Into Clients.</h2>
-          <p className="text-lg text-gray-700 mb-6">You don't need another pretty homepage.<br />You need a system that sells — even while you sleep.<br />At NovaForge, we build conversion-first websites that crush KPIs and scale your brand without guesswork.</p>
+          <p className="text-lg text-gray-300 mb-6">You don't need another pretty homepage.<br />You need a system that sells — even while you sleep.<br />At NovaForge, we build conversion-first websites that crush KPIs and scale your brand without guesswork.</p>
           {/* Glassy Lines with Tick Icon */}
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-3 bg-white/60 backdrop-blur-md rounded-lg px-4 py-2 shadow border border-white/40">
