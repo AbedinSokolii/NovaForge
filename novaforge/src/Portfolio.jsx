@@ -190,7 +190,7 @@ const PortfolioPage = () => {
                         ? 'scale(1.1) translateZ(50px)' 
                         : isLeft 
                           ? 'translateX(-400px) scale(0.8) translateZ(-20px)' 
-                          : 'translateX(505px) scale(0.8) translateZ(-20px)',
+                          : 'translateX(404px) scale(0.8) translateZ(-20px)',
                     }}
                     onMouseEnter={() => videoRefs.current[index]?.play().catch(console.error)}
                     onMouseLeave={() => {
